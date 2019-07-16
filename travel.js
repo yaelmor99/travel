@@ -20,8 +20,8 @@ let Travel = function Travel(name, price){
 Travel.getTravelsCount = function getTravelsCount(){
     return db.travelList.length;
 }
-Travel.buildTravelHtml = function buildTravelHtml(travelObject){
-    return `<div class="travel-item" travel-id="${travelObject.Id}">
+Travel.buildlHtml = function buildlHtml(travelObject){
+    return `<div class="travel-item item" travel-id="${travelObject.Id}">
         <div class="travel-name">${travelObject.Name}</div>
         <div class="travel-price">${travelObject.Price}</div>
     </div>`;
@@ -41,6 +41,6 @@ db.travelList.push(new Travel('USA', 500))
 let travelListElm = document.getElementById('travel-list')
 for (let i = 0; i < db.travelList.length; i++) {
     let _t = db.travelList[i];
-    let h = Travel.buildTravelHtml(_t)
+    let h = Travel.buildlHtml(_t)
     travelListElm.innerHTML += h;
 }
